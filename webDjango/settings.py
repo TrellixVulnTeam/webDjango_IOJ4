@@ -151,10 +151,13 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, "collected_static"),
+    os.path.join(BASE_DIR, "static"),
 )
 
 STATIC_URL = '/static/'
+
+# 静态文件收集目录
+STATIC_ROOT = os.path.join(BASE_DIR, 'collected_static')
 
 # SMTP服务器，改为你的邮箱的smtp!
 EMAIL_HOST = 'smtp.qq.com'
